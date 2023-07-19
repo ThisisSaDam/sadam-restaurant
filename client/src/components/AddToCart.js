@@ -1,9 +1,9 @@
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useProvider } from '../context';
 
 
-const AddToCard = ({dish}) => {
+const AddToCart = ({dish}) => {
 
   const [amount, setAmount] = useState(0)
   const {dishes, updateDishes} = useProvider();
@@ -27,13 +27,13 @@ const AddToCard = ({dish}) => {
   }
 
   return (
-    <div className='add-to-card'>
+    <div className='add-to-cart'>
       <label>Số Lượng:</label>
       <input type={'number'} min={0} max={100} placeholder={0}
         value={amount} onChange={e => setAmount(e.target.value)}></input>
       <button onClick={addToCart}><AddShoppingCartIcon /></button>
     </div>
-)
+  )
 }
 
-export default AddToCard;
+export default AddToCart;

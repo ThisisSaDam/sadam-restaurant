@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import Layout from "../pages/Layout";
 import { chicken, hamburger, pizza } from "../fakedata/data";
-import AddToCard from "../components/AddToCard";
+import AddToCart from "../components/AddToCart";
 import { useProvider } from "../context";
 import { Navigate } from "react-router-dom";
 import { useRef } from 'react';
@@ -21,7 +21,7 @@ const Menu = () => {
     <div className="dishes-item">
       <img src={foodItem.url} />
       <h4>{foodItem.name} <p>{foodItem.price}$</p></h4>
-      <AddToCard dish={foodItem}/>
+      <AddToCart dish={foodItem}/>
     </div>
   );
 
@@ -29,7 +29,7 @@ const Menu = () => {
     <div className="dishes-item">
       <img src={foodItem.url} />
       <h4>{foodItem.name} <p>{foodItem.price}$</p></h4>
-      <AddToCard dish={foodItem}/>
+      <AddToCart dish={foodItem}/>
     </div>
   );
 
@@ -37,7 +37,7 @@ const Menu = () => {
     <div className="dishes-item">
       <img src={foodItem.url} />
       <h4>{foodItem.name} <p>{foodItem.price}$</p></h4>
-      <AddToCard dish={foodItem}/>
+      <AddToCart dish={foodItem}/>
     </div> 
   )
 
@@ -61,7 +61,6 @@ const Menu = () => {
           <span ref={chickenRef} className="empty-row"></span>
           {chickenItem}
         </div>
-        
       </div>
     </Layout>
   )
