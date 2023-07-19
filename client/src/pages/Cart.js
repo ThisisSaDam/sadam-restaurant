@@ -16,7 +16,7 @@ const Cart = () => {
   }
 
   const submitOrder = async () => {
-    const response = await fetch('http://localhost:3003/api/order', {
+    const response = await fetch('https://puce-frightened-camel.cyclic.app/api/order', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -13,7 +13,7 @@ class Form extends Component{
   async handleSubmit(event){
     event.preventDefault()
     const { email, password } = this.state;
-    const response = await fetch('http://localhost:3003/api/register', {
+    const response = await fetch('https://puce-frightened-camel.cyclic.app/api/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

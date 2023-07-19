@@ -14,7 +14,7 @@ const Admin = () => {
   useEffect(() => {
     if (!token) return;
     const getData = async () => {
-      const response = await fetch('http://localhost:3003/api/order', {
+      const response = await fetch('https://puce-frightened-camel.cyclic.app/api/order', {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`,
@@ -41,7 +41,7 @@ const Admin = () => {
   }
   
   const logout = async () => {
-    const response = await fetch('http://localhost:3003/api/logout', {
+    const response = await fetch('https://puce-frightened-camel.cyclic.app/api/logout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
