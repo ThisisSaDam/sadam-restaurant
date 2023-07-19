@@ -26,8 +26,8 @@ class Form extends Component{
 
     const data = await response.json()
     const { message } = data
-    if (message === 'error') alert('Đăng ký thất cmm bại!')
-    else alert('Ngon!!!')
+    if (message === 'error') alert('Đăng ký không thành công!')
+    else alert('Đăng ký thành công!')
   }
   
   // Method causes to store all the values of the 

@@ -27,8 +27,8 @@ const Cart = () => {
 
     const data = await response.json()
     const { message } = data
-    if (message === 'error') alert('Order thất cmm bại!')
-    else alert('Ngon!!!')
+    if (message === 'error') alert('Đặt hàng không thành công!')
+    else alert('Đặt hàng thành công!')
   }
 
   return (

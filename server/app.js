@@ -20,10 +20,19 @@ const generateAccessToken = (username) => {
   return jwt.sign({username}, process.env.TOKEN_SECRET, { expiresIn: '1d' });
 }
 
+const allowedOrigins = ['http://localhost:3000', 'https://restaurant-frontend-dxkk.onrender.com']
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+
+app.use(cors(corsOptions));
 app.use(express.json())
-app.use(cors({
-  origin: 'http://localhost:3000'
-}));
 
 app.post('/api/login', async (req, res) => {
   const {username, password} = req.body
