@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  /* background-image: url('../public//imgs/background.jpg'); */
+  font-weight: 500;
+  width: auto;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: auto;
+}
+
+.nav-bar {
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  z-index: 5;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  & h1 {
+    letter-spacing: -2px;
+    color: #ff5100;
+  }
+  & ul {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding-inline-start: 0;
+    gap: 10px;
+    & .nav-link {
+      text-decoration: none;
+      color: black;
+      padding: 10px 20px;
+      font-weight: 700;
+      font-size: 22px;
+      cursor: pointer;
+      &:hover {
+        color: #ff5100;
+        transition: all 0.3s ease;
+      }
+    }
+    & .sign-in-btn {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      border: 1px solid black;
+      color: black;
+      font-weight: 700;
+      &:hover {
+        color: rgb(255, 255, 255);
+        background-color: #ff5100;
+        border: 1px solid #ff5100;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  & .footer {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 200px;
+    & h5 {
+      padding-top: 20px; 
+      color: #ff5100;
+      font-size: 19px;
+      margin: 0;
+    };
+    & a {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: black;
+    };
+  }
+}
+
+.copy {
+  font-weight: 400;
+  margin: 0;
+  background-color: #ff5100;
+  color: rgb(255, 255, 255);
+  padding: 15px;
+}
+
+.home {
+  padding: 80px 0 0 0;
+  height: auto;
+  text-align: center;
+  & .overlay {
+    background-color: black;
+    opacity: 0.4;
+    position: absolute;
+    height: 930px;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+  };
+  & .spotlight {
+    background-image: url('../public/imgs/home-background.jpg');
+    background-position: 50%;
+    background-size: cover;
+    height: 850px;
+    position: relative;
+    & .content-home {
+      position: absolute;
+      z-index: 2;
+      height: 850px;
+      width: 100%;
+      top: 0;
+      & h2 {
+        color: #ff5100;
+        font-size: 55px;
+        text-align: center;
+        padding: 150px 0 100px 0;
+        margin: 0;
+      }
+      & .spotlight-imgs {
+        display: flex;
+        justify-content: center;
+        gap: 50px;        
+      }
+    }
+  };
+  & h1 {
+    padding: 100px;
+    font-size: 60px;
+    color: black;
+  };
+  & h2 {
+    color: #ff5100;
+    font-size: 50px;
+  };
+  & .top-dishes {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    padding: 100px;
+    & .dishes-item {
+      text-align: left;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px 30px;
+      width: 300px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+      border-radius: 10px;
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        transition: all 0.3s ease;
+      };
+      & img {
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      & h4 {
+        color: #ff5100;
+      }
+      & p {
+        margin: 0;
+      }
+      & .order-btn {
+        margin-top: 20px;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+        border: 1px solid #ff5100;
+        color: #ff5100;
+        font-weight: 700;
+        &:hover {
+          color: rgb(255, 255, 255);
+          background-color: #ff5100;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  };
+  & .container-introduction {
+    background-color: rgb(255, 255, 255);
+    width: 1290px;
+    margin: auto;
+    border-radius: 10px;
+    & .introduction {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+      border-radius: 10px;
+      padding: 20px 40px;
+      margin: 125px 0;
+      & .chef-item {
+        padding: 90px 200px;
+        & .item {
+          font-size: 20px;
+          padding: 0 60px;
+        }
+      }
+    };
+    & .food-recipe {
+      margin: 100px 0;
+      height: 100px;
+      align-items: center;
+      border-radius: 10px;
+      /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+      display: flex;
+      padding: 50px 20px;
+      gap: 10px;
+      height: auto;
+      & div {
+        width: 100%;
+        padding: 0 30px;
+      }
+      & img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+      };
+      & h4 {
+        font-size: 30px;
+      }
+      & p {
+        text-align: left;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.menu-container {
+  width: 100%;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  & .sub-nav {
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 20px;
+    & button {
+      width: 100px;
+      background: none;
+      outline: none;
+      border: none;
+      font-size: 15px;
+      border: 1px solid;
+      padding: 10px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      &:hover {
+        color: rgb(255, 255, 255);
+        background: #ff5100;
+        transition: all 0.3s ease;
+
+      }
+    }
+  }
+
+  & .menu {
+    width: 80%;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    row-gap: 50px;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    & .empty-row {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+    & .dishes-item {
+      padding: 50px;
+      text-align: left;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      border-radius: 10px;
+      margin: auto;
+      width: 300px;
+      height: 400px;
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        transition: all 0.3s ease;
+      }
+      & img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      & h4 {
+        font-size: 18px;
+        display: flex;
+        gap: 10px;
+        & p {
+          margin: 0;
+          color: #ff5100;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+
+.add-to-card {
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  display: flex;
+  /* padding: 10px; */
+  & label {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  & input {
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    font-size: 20px;
+    width: 80px;
+    cursor: pointer;
+  }
+
+  & button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    & :hover {
+      color: #ff5100;
+      background-color: rgb(255, 255, 255);
+    }
+
+  }
+}
+
+.sign-in-container {
+  padding: 100px;
+}
+
+
+.sign-in  {
+  margin: 100px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  & form {
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    & div {
+      display: flex;
+      gap: 20px;
+      width: 500px;
+      & label {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: #ff5100;
+      }
+      & input {
+        border: 1px solid black;
+        border-radius: 4px;
+        width: 200px;
+        line-height: 20px;
+        font-size: 20px;
+        background: none;
+      }
+      & button {
+        border-radius: 20px;
+        border: 1px solid #ff5100;
+        background: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        color: #ff5100;
+        font-size: 20px;
+        &:hover {
+          background-color: #ff5100;
+          color: rgb(255, 255, 255);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+
+.admin-login {
+  border-radius: 20px;
+  border: 1px solid #ff5100;
+  background: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #ff5100;
+  font-size: 20px;
+  text-decoration: none;
+  &:hover {
+    background-color: #ff5100;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+  }
+}
+
+
+.admin-container {
+  width: 90%;
+  margin: auto;
+  & h2 {
+    color: #ff5100;
+    text-align: center;
+  }
+  & .header-admin {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    & h1 {
+      color: #ff5100;
+    }
+    & .sign-up-btn {
+      background: none;
+      outline: none;
+      border: 1px solid;
+      &:hover {
+        color: #ff5100;
+      }
+    }
+  }
+  & .order {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    justify-content: left;
+    & .order-item {
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      padding: 20px;
+      text-align: center;
+      & h3 {
+        color: #ff5100;
+      }
+      & h4 {
+        font-size: 20px;
+        color: #ff5100;
+      }
+      & span {
+        & img {
+          height: 200px;
+          width: 200px;
+          padding: 20px;
+          object-fit: cover;
+        }
+        & h5 {
+          font-size: 15px;
+        }
+      }
+  
+    }
+  }
+  
+}
+
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  & h5 {
+    font-size: 15px;
+  }
+  & h4 {
+    font-size: 20px;
+  }
+}
+
+.order-btn {
+  position: fixed;
+  left: 20px;
+  & h3 {
+    color: #ff5100;
+  }
+  & button {
+    background: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    &:hover {
+      color: rgb(255, 255, 255);
+      background-color: #ff5100;
+    }
+  }
+}
