@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 
 const Cart = () => {
 
-  const {dishes, token} = useProvider()
+  const {dishes, updateDishes, token} = useProvider()
   if (!token) {
     return <Navigate to={'/signin'} />
   }
@@ -28,7 +28,11 @@ const Cart = () => {
     const data = await response.json()
     const { message } = data
     if (message === 'error') alert('Đặt hàng không thành công!')
-    else alert('Đặt hàng thành công!')
+    else {
+      alert('Đặt hàng thành công!')
+      updateDishes([])
+      document.cookie = 'dishes=; Expires=Thu, 01 Jan 1970 00:00:01 GMT'
+    }
   }
 
   return (
